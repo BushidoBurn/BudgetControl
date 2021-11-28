@@ -37,9 +37,9 @@ Budget CLI
    * [ ] Add currency
 ## Compile & Run
 ### Compile:
-            - gcc budget.c expense.c common_actions.c -o budget
+             gcc budget.c expense.c common_actions.c -o budget
 ### Run:
-            - ./budget
+             ./budget
 ### **Contributors**
  
  <div>
