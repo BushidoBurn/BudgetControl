@@ -3,29 +3,24 @@
 Budget CLI
 
 
- * 
- *  This program is written for managing monthly expences and budget
- * 
- * 
- * Program a budget planner for the available monthly capital and the
-*  monthly cost of living informa7on 
-*   such as rent, food, telephone costs, etc.
-*
-*  For the months January to December. Use a suitable structure array for
-*  this. (Array of months)
-*
+ 
+*  This program is written for managing monthly expences and budget
+ 
+*  Program a budget planner for the available monthly capital and the monthly cost of living informa7on 
+*  such as rent, food, telephone costs, etc.
+
+*  For the months January to December. Use a suitable structure array for this. (Array of months)
+
 *  Allow you to enter individual values in a monetary currency of your choice. (Define an enum for currencies)
-*
-*  Save the entries in a suitable structure array with variable amount of
-*  entries.(Define a customtype with struct and make a linked list)
-*
-*  Enable the entry of new items with their data and a list func7on that
-*  displays the budget planner .(Read and print entries)
-*
+
+*  Save the entries in a suitable structure array with variable amount of entries.(Define a customtype with struct and make a linked list)
+
+*  Enable the entry of new items with their data and a list func7on that displays the budget planner .(Read and print entries)
+
 *  Implement add, delete, sort, search and list func7ons in your code
-*
+
 *  Write and read your data in and from a file with the name “budget.txt".
-* 
+ 
  
  
 ## Done:
