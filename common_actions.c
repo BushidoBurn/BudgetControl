@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 #include "expense.h"
 
 void insert_from_terminal(expense **first_expense_address, expense **last_expense_address, int *expense_counter)
@@ -130,4 +131,32 @@ void modify_sorted_link_nexts(expense i[], int *expense_counter)
         /* code */
         (*(i + j)).next = (i + j);
     }
+}
+
+void write_to_file(char *filename, expense *first_expense_address, int *expense_counter)
+{
+    FILE *outfile;
+    if (access(filename, F_OK) == 0)
+    {
+        // file exists
+        outfile = fopen(filename, "a");
+    }
+    else
+    {
+        // file doesn't exist
+        outfile = fopen(filename, "w");
+    }
+
+    if ((*expense_counter))
+    {
+
+        expense *i = first_expense_address;
+        expense *next = NULL;
+        for (; i != NULL; i = next)
+        {
+            next = i->next;
+            fprintf(outfile, "%s %.2f %d\n", i->definition, i->how_much, i->month);
+        }
+    }
+    fclose(outfile);
 }

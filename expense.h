@@ -19,3 +19,4 @@ void list_all_expenses(expense *first_expense_address, int *expese_counter);
 void sort_by_price(expense *first_expense_address, int *expense_counter);
 void modify_link_pointers(expense *i);
 void modify_sorted_link_nexts(expense i[], int *expense_counter);
+void write_to_file(char *filename, expense *first_expense_address, int *expense_counter);

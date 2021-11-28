@@ -34,6 +34,7 @@ expense *first_item_address = NULL;
 expense *last_item_address = NULL;
 //expense *temp;
 int expense_counter = 0;
+char fname[51];
 //char *months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
 int main()
@@ -55,7 +56,7 @@ int main()
 
     while (1)
     {
-        printf("i for creating expense, l for listing all expenses, s for sorting\n");
+        printf("i for creating expense, l for listing all expenses, s for sorting, w for saving to file\n");
         scanf("%c", action);
 
         switch (*action)
@@ -72,8 +73,17 @@ int main()
 
         case 'x':
             delete_all_expenses_from_memory(first_item_address, &expense_counter);
+            break;
         case 's':
             sort_by_price(first_item_address, &expense_counter);
+            break;
+
+        case 'w':
+
+            printf("\nEnter file name with extension Ex: Data.txt\n");
+            scanf("%50s", fname);
+            write_to_file(fname, first_item_address, &expense_counter);
+            break;
 
         default:
             break;
