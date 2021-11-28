@@ -55,7 +55,7 @@ int main()
 
     while (1)
     {
-        printf("i for creating expense, l for listing all expenses\n");
+        printf("i for creating expense, l for listing all expenses, s for sorting\n");
         scanf("%c", action);
 
         switch (*action)
