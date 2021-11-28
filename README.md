@@ -32,9 +32,9 @@ Budget CLI
 
 ## Todo:
    * Delete only selected item
-   * search
-   * read and write
-   * add currency
+   * Search
+   * Read and write
+   * Add currency
 
  
  
