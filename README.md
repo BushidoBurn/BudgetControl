@@ -24,11 +24,11 @@ Budget CLI
  ![Budget Screenshot](./Screenshot.png)
  
 ## Done:
-   * [x] Created Linked List For Expense Struct(It is not like Arrays it is dynamic Grows and shrinks)
-   * [x] Functions created for adding new expenses and removing all expenses for freeing allocated mem space
-   * [x] User is able to enter description(float),price(float),month(int) to expense type while adding new expense
-   * [x] Listing functionallity added
-   * [x] Sort functionality added by implementing Bublee sort algorithm
+   * [x] Created Linked List For Expense Struct(It is not like Arrays it is dynamic Grows and shrinks):maple_leaf:
+   * [x] Functions created for adding new expenses and removing all expenses for freeing allocated mem space:maple_leaf:
+   * [x] User is able to enter description(float),price(float),month(int) to expense type while adding new expense:maple_leaf:
+   * [x] Listing functionallity added:maple_leaf:
+   * [x] Sort functionality added by implementing Bublee sort algorithm:maple_leaf:
 
 ## Todo:
    * [ ] Delete only selected item
@@ -36,10 +36,13 @@ Budget CLI
    * [ ] Read and write
    * [ ] Add currency
 
+### **Contributors**
  
- 
-
-      
+ <div>
+  <img src="https://avatars.githubusercontent.com/u/2779737?v=4" width="48" style="float:left">
+  <img src="https://avatars.githubusercontent.com/u/29724000?v=4" width="48" style="">
+   <img src="https://avatars.githubusercontent.com/u/55444947?v=4" width="48" style="">
+  </div>    
       
 
 
