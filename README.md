@@ -21,7 +21,7 @@ Budget CLI
 
 *  Write and read your data in and from a file with the name “budget.txt".
  
- 
+ ![Budget Screenshot](./Screenshot.png)
  
 ## Done:
    * [x] Created Linked List For Expense Struct(It is not like Arrays it is dynamic Grows and shrinks)
