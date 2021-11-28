@@ -24,17 +24,17 @@ Budget CLI
  
  
 ## Done:
-   * Created Linked List For Expense Struct(It is not like Arrays it is dynamic Grows and shrinks)
-   * Functions created for adding new expenses and removing all expenses for freeing allocated mem space
-   * User is able to enter description(float),price(float),month(int) to expense type while adding new expense
-   * Listing functionallity added
-   * Sort functionality added by implementing Bublee sort algorithm
+   * [x] Created Linked List For Expense Struct(It is not like Arrays it is dynamic Grows and shrinks)
+   * [x] Functions created for adding new expenses and removing all expenses for freeing allocated mem space
+   * [x] User is able to enter description(float),price(float),month(int) to expense type while adding new expense
+   * [x] Listing functionallity added
+   * [x] Sort functionality added by implementing Bublee sort algorithm
 
 ## Todo:
-   * Delete only selected item
-   * Search
-   * Read and write
-   * Add currency
+   * [ ] Delete only selected item
+   * [ ] Search
+   * [ ] Read and write
+   * [ ] Add currency
 
  
  
