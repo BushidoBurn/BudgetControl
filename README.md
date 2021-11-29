@@ -29,7 +29,7 @@ Budget CLI
    * [x] User is able to enter description(float),price(float),month(int) to expense type while adding new expense:maple_leaf:
    * [x] Listing functionallity added:maple_leaf:
    * [x] Sort functionality added by implementing Bublee sort algorithm:maple_leaf:
-   * [x] Read and write
+   * [x] Read and write:maple_leaf:
 
 ## Todo:
    * [ ] Delete only selected item
