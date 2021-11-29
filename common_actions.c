@@ -3,6 +3,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include "expense.h"
+#include <wchar.h>
+#include <locale.h>
 
 void insert_from_terminal(expense **first_expense_address, expense **last_expense_address, int *expense_counter)
 {
@@ -53,7 +55,7 @@ void delete_all_expenses_from_memory(expense *first_expense_address, int *expens
     *expense_counter = 0;
 }
 
-void list_all_expenses(expense *first_expense_address, int *expense_counter)
+void list_all_expenses(expense *first_expense_address, int *expense_counter, wchar_t *currency)
 {
     int item_index = 0;
 
@@ -64,7 +66,7 @@ void list_all_expenses(expense *first_expense_address, int *expense_counter)
         for (; i != NULL; i = next)
         {
             next = i->next;
-            printf("(%d)  %30s  %.2f  %i\n", item_index, i->definition, i->how_much, i->month);
+            wprintf(L"(%d)  %30s  %.2f %lc  %i\n", item_index, i->definition, i->how_much, currency[0], i->month);
             item_index++;
         }
     }
@@ -74,7 +76,7 @@ void list_all_expenses(expense *first_expense_address, int *expense_counter)
     }
 }
 
-void sort_by_price(expense *first_expense_address, int *expense_counter)
+void sort_by_price(expense *first_expense_address, int *expense_counter, wchar_t *currency)
 {
     expense dummy_array[*expense_counter];
 
@@ -111,7 +113,7 @@ void sort_by_price(expense *first_expense_address, int *expense_counter)
     }
     for (int i = 0; i < *expense_counter; i++)
     {
-        printf("  %30s  %.2f  %i\n", dummy_array[i].definition, dummy_array[i].how_much, dummy_array[i].month);
+        wprintf(L"  %30s  %.2f %lc %i\n", dummy_array[i].definition, dummy_array[i].how_much, currency[0], dummy_array[i].month);
     }
     modify_sorted_link_nexts(dummy_array, expense_counter);
 }

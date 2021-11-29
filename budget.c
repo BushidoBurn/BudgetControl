@@ -26,6 +26,8 @@
 
 #include <stdio.h>
 #include "expense.h"
+#include <wchar.h>
+#include <locale.h>
 
 float income_for_months[12];
 float money_left[12];
@@ -35,10 +37,13 @@ expense *last_item_address = NULL;
 //expense *temp;
 int expense_counter = 0;
 
+wchar_t currency_symbols[] = {0x20ac, 0x0024, 0x00A3, 0x00A5};
+
 //char *months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
 int main()
 {
+    setlocale(LC_CTYPE, "");
     //float price;
     //char *definition[80];
     //int month;
@@ -69,14 +74,14 @@ int main()
             break;
 
         case 'l':
-            list_all_expenses(first_item_address, &expense_counter);
+            list_all_expenses(first_item_address, &expense_counter, currency_symbols);
             break;
 
         case 'x':
             delete_all_expenses_from_memory(first_item_address, &expense_counter);
             break;
         case 's':
-            sort_by_price(first_item_address, &expense_counter);
+            sort_by_price(first_item_address, &expense_counter, currency_symbols);
             break;
 
         case 'w':
