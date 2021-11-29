@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
 #include "expense.h"
 
 void insert_from_terminal(expense **first_expense_address, expense **last_expense_address, int *expense_counter)
@@ -159,4 +161,59 @@ void write_to_file(char *filename, expense *first_expense_address, int *expense_
         }
     }
     fclose(outfile);
+}
+
+void read_from_file(char *filename, expense **first_expense_address, expense **last_expense_address, int *expense_counter)
+{
+    printf("\n\n");
+    FILE *infile;
+    char line[200];
+    expense *new_expense;
+
+    if (access(filename, F_OK) == 0)
+    {
+        // file exists
+        infile = fopen(filename, "r");
+
+        while (fscanf(infile, "%[^\n] ", line) != EOF)
+        {
+            // printf("%s\n", line);
+            char *token = strtok(line, " ");
+            char *definition;
+            int month;
+            float price;
+            int counter = 0;
+
+            while (token != NULL)
+            {
+                if (counter == 0)
+                {
+                    definition = token;
+                }
+                else if (counter == 1)
+                {
+                    price = atof(token);
+                }
+                else if (counter == 2)
+                {
+                    month = atoi(token);
+                    counter = 0;
+                }
+                //printf(" %s\n", token); //printing each token
+
+                token = strtok(NULL, " ");
+                counter++;
+            }
+            //printf("%s %f %d", definition, price, month);
+            new_expense = create_expense(definition, &month, &price);
+
+            add_expense(first_expense_address, last_expense_address, new_expense, expense_counter);
+        }
+    }
+    else
+    {
+        // file doesn't exist
+        printf("That file does not exist in current directory\n");
+    }
+    printf("\n\n");
 }
