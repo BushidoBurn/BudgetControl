@@ -30,11 +30,12 @@ Budget CLI
    * [x] Listing functionallity added:maple_leaf:
    * [x] Sort functionality added by implementing Bublee sort algorithm:maple_leaf:
    * [x] Read and write:maple_leaf:
+   * [x] Add currency:maple_leaf:
 
 ## Todo:
    * [ ] Delete only selected item
    * [ ] Search
-   * [ ] Add currency
+   
 ## Compile & Run
 ### Compile:
              gcc budget.c expense.c common_actions.c -o budget
