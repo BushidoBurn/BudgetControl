@@ -224,3 +224,26 @@ void read_from_file(char *filename, expense **first_expense_address, expense **l
     }
     printf("\n\n");
 }
+
+void search_in_definition(expense *first_expense_address, int *expense_counter, char *search_term, wchar_t *currency)
+{
+
+    int item_index = 0;
+
+    if ((*expense_counter))
+    {
+        expense *i = first_expense_address;
+        expense *next = NULL;
+        for (; i != NULL; i = next)
+        {
+            next = i->next;
+            if (strstr(i->definition, search_term))
+                wprintf(L"(%d)  %30s  %.2f %lc  %i\n", item_index, i->definition, i->how_much, currency[0], i->month);
+            item_index++;
+        }
+    }
+    else
+    {
+        printf("\nNo Expense To List\n");
+    }
+}

@@ -28,6 +28,7 @@
 #include "expense.h"
 #include <wchar.h>
 #include <locale.h>
+#include <string.h>
 
 float income_for_months[12];
 float money_left[12];
@@ -37,6 +38,7 @@ expense *last_item_address = NULL;
 //expense *temp;
 int expense_counter = 0;
 int selected_item = -1;
+char search_term[80];
 
 wchar_t currency_symbols[] = {0x20ac, 0x0024, 0x00A3, 0x00A5};
 
@@ -103,6 +105,15 @@ int main()
             scanf("%d", &selected_item);
             release_selected_expense(first_item_address, &selected_item, &expense_counter);
 
+            break;
+        case 'f':
+            printf("Enter search term\n");
+            fflush(stdin);
+            fgets(search_term, 80, stdin);
+            int len = strlen(search_term); //where buff is your char array fgets is using
+            if (search_term[len - 1] == '\n')
+                search_term[len - 1] = '\0';
+            search_in_definition(first_item_address, &expense_counter, search_term, currency_symbols);
             break;
         default:
             break;

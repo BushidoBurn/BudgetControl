@@ -23,3 +23,4 @@ void modify_sorted_link_nexts(expense i[], int *expense_counter);
 void write_to_file(char *filename, expense *first_expense_address, int *expense_counter);
 void read_from_file(char *filename, expense **first_expense_address, expense **last_expense_address, int *expense_counter);
 void release_selected_expense(expense *start, int *selected_index, int *expense_counter);
+void search_in_definition(expense *first_expense_address, int *expense_counter, char *search_term, wchar_t *currency);
