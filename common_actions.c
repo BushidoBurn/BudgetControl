@@ -17,7 +17,12 @@ void insert_from_terminal(expense **first_expense_address, expense **last_expens
     printf("Enter Definition  max 79 characters\n");
     //fputs("Enter Definition  max 79 characters", stdout);
     //fgets(definition, sizeof(definition), stdin);
-    scanf("%79s[0-9a-zA-Z ]", definition);
+    //scanf("%79s[0-9a-zA-Z ]", definition);
+    fflush(stdin);
+    fgets(definition, 80, stdin);
+    int len = strlen(definition); //where buff is your char array fgets is using
+    if (definition[len - 1] == '\n')
+        definition[len - 1] = '\0';
     printf("\nEnter price\n");
     scanf("%f", &price);
     printf("\nEnter month as a number Ex: 1 for January");
