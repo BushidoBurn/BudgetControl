@@ -43,6 +43,9 @@ char search_term[80];
 wchar_t currency_symbols[] = {0x20ac, 0x0024, 0x00A3, 0x00A5};
 
 //char *months[] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+char key_char = '\0';
+
+char *action = &key_char;
 
 int main()
 {
@@ -53,7 +56,6 @@ int main()
     //char *definition[80];
     //int month;
 
-    char *action;
     // printf("\033[0;31m"); //Set the text to the color red
     //printf(“\033[0m”); //Resets the text to default color
     // printf("\033[0;37m"); //Resets the text to default white
