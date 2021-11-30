@@ -48,7 +48,7 @@ void release_selected_expense(expense *start, int *selected_index, int *expense_
             { // printf("This is before adres %p", i);
                 printf("if 0 worked");
                 fflush(stdout);
-                *start = *(i->next);
+                *start = *i->next;
                 free(i->definition);
                 free(i);
                 *expense_counter = *expense_counter - 1;
