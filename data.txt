@@ -1,3 +1,8 @@
 nike 55.00 1
 ipod 33.00 2
 hamburger 3.00 5
+apple 1.20 2
+banana 2.00 3
+melon 2.50 7
+fish 6.50 2
+cheese 3.30 3
