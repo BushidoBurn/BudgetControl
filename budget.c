@@ -72,12 +72,12 @@ int main()
         printf("\n#################################################################################################--Commands--################################################################################################");
         printf("\n#\ti=insert\n#\tx=Delete all items from memory\n#\tz=Delete given item\n#\tf=find\n#\tl=list\n#\ts=sort\n#\tw=write to file\n#\tr=read from file\n#\tc=clearscreen\n");
         printf("\n############################################################################################################################################################################################################\n");
-        scanf("%c", action);
-        // fflush(stdin);
-        // fgets(action, 30, stdin);
-        // int len = strlen(search_term); //where buff is your char array fgets is using
-        // if (action[len - 1] == '\n')
-        //     action[len - 1] = '\0';
+        //scanf("%c", action);
+        fflush(stdin);
+        fgets(action, 30, stdin);
+        int len = strlen(search_term); //where buff is your char array fgets is using
+        if (action[len - 1] == '\n')
+            action[len - 1] = '\0';
 
         switch (*action)
         {
