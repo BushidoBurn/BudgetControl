@@ -172,7 +172,7 @@ void write_to_file(char *filename, expense *first_expense_address, int *expense_
 
 void read_from_file(char *filename, expense **first_expense_address, expense **last_expense_address, int *expense_counter)
 {
-    printf("\n\n");
+    //printf("\n\n");
     FILE *infile;
     char line[200];
     expense *new_expense;
@@ -216,13 +216,16 @@ void read_from_file(char *filename, expense **first_expense_address, expense **l
 
             add_expense(first_expense_address, last_expense_address, new_expense, expense_counter);
         }
+        printf("\n");
+        printf("   !!!  Data Was Loaded Succesfully !!!\n");
+        printf("   !!!  Press l for listing !!!\n");
     }
     else
     {
         // file doesn't exist
         printf("That file does not exist in current directory\n");
     }
-    printf("\n\n");
+    printf("\n");
 }
 
 void search_in_definition(expense *first_expense_address, int *expense_counter, char *search_term, wchar_t *currency)
@@ -246,4 +249,10 @@ void search_in_definition(expense *first_expense_address, int *expense_counter, 
     {
         printf("\nNo Expense To List\n");
     }
+}
+
+void clearScreen()
+{
+    const char *CLEAR_SCREEN_ANSI = "\e[1;1H\e[2J";
+    write(STDOUT_FILENO, CLEAR_SCREEN_ANSI, 12);
 }

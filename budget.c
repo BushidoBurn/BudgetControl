@@ -46,6 +46,8 @@ wchar_t currency_symbols[] = {0x20ac, 0x0024, 0x00A3, 0x00A5};
 
 int main()
 {
+
+    printf("\n");
     setlocale(LC_CTYPE, "");
     //float price;
     //char *definition[80];
@@ -65,8 +67,15 @@ int main()
     while (1)
     {
         char fname[51];
-        printf("i for creating expense, l for listing all expenses, s for sorting, w writes and r reads a file\n");
-        scanf("%c", action);
+        printf("\n#################################################################################################--Commands--################################################################################################");
+        printf("\n#\ti=insert\n#\tx=Delete all items from memory\n#\tz=Delete given item\n#\tf=find\n#\tl=list\n#\ts=sort\n#\tw=write to file\n#\tr=read from file\n#\tc=clearscreen\n");
+        printf("\n############################################################################################################################################################################################################\n");
+        //scanf("%c", action);
+        fflush(stdin);
+        fgets(action, 30, stdin);
+        int len = strlen(search_term); //where buff is your char array fgets is using
+        if (action[len - 1] == '\n')
+            action[len - 1] = '\0';
 
         switch (*action)
         {
@@ -115,7 +124,11 @@ int main()
                 search_term[len - 1] = '\0';
             search_in_definition(first_item_address, &expense_counter, search_term, currency_symbols);
             break;
+        case 'c':
+            clearScreen();
+            break;
         default:
+
             break;
         }
     }
