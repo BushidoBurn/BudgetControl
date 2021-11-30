@@ -31,9 +31,10 @@ Budget CLI
    * [x] Sort functionality added by implementing Bublee sort algorithm:maple_leaf:
    * [x] Read and write:maple_leaf:
    * [x] Add currency:maple_leaf:
+   * [x] Delete only selected item:maple_leaf:
 
 ## Todo:
-   * [ ] Delete only selected item
+   
    * [ ] Search
    
 ## Compile & Run
