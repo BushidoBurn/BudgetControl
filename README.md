@@ -32,10 +32,11 @@ Budget CLI
    * [x] Read and write:maple_leaf:
    * [x] Add currency:maple_leaf:
    * [x] Delete only selected item:maple_leaf:
+   * [x] Search:maple_leaf:
 
 ## Todo:
    
-   * [ ] Search
+  
    
 ## Compile & Run
 ### Compile:
