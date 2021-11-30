@@ -36,6 +36,7 @@ expense *first_item_address = NULL;
 expense *last_item_address = NULL;
 //expense *temp;
 int expense_counter = 0;
+int selected_item = -1;
 
 wchar_t currency_symbols[] = {0x20ac, 0x0024, 0x00A3, 0x00A5};
 
@@ -97,6 +98,12 @@ int main()
             read_from_file(fname, &first_item_address, &last_item_address, &expense_counter);
             break;
 
+        case 'z':
+            printf("Enter index number of item that you want to delete");
+            scanf("%d", &selected_item);
+            release_selected_expense(first_item_address, &selected_item, &expense_counter);
+
+            break;
         default:
             break;
         }
