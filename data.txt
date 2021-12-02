@@ -6,3 +6,4 @@ banana 2.00 3
 melon 2.50 7
 fish 6.50 2
 cheese 3.30 3
+ 85.00 6
