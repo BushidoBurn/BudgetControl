@@ -1,3 +1,0 @@
- 
-srh: semester.c
-    gcc semester.c student.c finance.c 
