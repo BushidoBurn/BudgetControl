@@ -15,9 +15,9 @@ Budget CLI
 
 *  Save the entries in a suitable structure array with variable amount of entries.(Define a customtype with struct and make a linked list)
 
-*  Enable the entry of new items with their data and a list func7on that displays the budget planner .(Read and print entries)
+*  Enable the entry of new items with their data and a list function that displays the budget planner .(Read and print entries)
 
-*  Implement add, delete, sort, search and list func7ons in your code
+*  Implement add, delete, sort, search and list functions in your code
 
 *  Write and read your data in and from a file with the name “budget.txt".
  
